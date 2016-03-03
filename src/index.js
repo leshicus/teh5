@@ -1,15 +1,15 @@
 import React from 'react';
-import {render} from 'react-dom';
-import { Provider } from 'react-redux';
-import { Router, browserHistory } from 'react-router';
-import routes from './routes';
-import configureStore from './store/configureStore';
+import ReactDOM from 'react-dom';
+
+import App from './containers/App';
+
 import './styles/styles.scss'; //Yep, that's right. You can import SASS/CSS files too! Webpack will run the associated loader and plug this into the page.
 
-const store = configureStore();
+import '../vendor/semantic/dist/semantic.css';
+import '../vendor/semantic/dist/semantic.js';
 
-render(
-  <Provider store={store}>
-    <Router history={browserHistory} routes={routes} />
-  </Provider>, document.getElementById('app')
-);
+// render(
+// 	<App />, document.getElementById('app')
+// );
+
+ReactDOM.render(<App />, document.getElementById('app'));
