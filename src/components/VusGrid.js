@@ -15,7 +15,8 @@ let VusGrid = React.createClass({
   },
   handleMouseClick: function(src, index, e) {
     this.src = src;
-    this.index = index;
+ this.index = index;
+
 
     $('.modal_2.fullscreen.modal').modal((function() {
       let img = ReactDOM.findDOMNode(this.refs.img_modal);
@@ -47,7 +48,8 @@ let VusGrid = React.createClass({
     let className = "sixteen wide mobile eight wide tablet four wide computer column";
 
     return (
-      <div className="ui segment">
+      <div className="app-content">
+      <div className="ui vertical stripe segment">
         <h1 className = "ui header">
           Military registration
         </h1>
@@ -82,6 +84,7 @@ let VusGrid = React.createClass({
               width="100%"
             />
         </div>
+      </div>
       </div>
     );
   }

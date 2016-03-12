@@ -89,41 +89,43 @@ let TestingSystemGrid = React.createClass({
 
   render: function() {
     return (
-      <div className="ui segment">
-        <h1 className = "ui header">
-          Testing system
-        </h1>   
-        <div className="ui grid">
-          {
-            this.images.map((image, index) => {
-              return (
-                <a
-                  href="#" 
-                  className={this.className+` img_`+index}
-                  key={`level_${index}`}
-                  data-content={image.dc}
-                  data-letiation="inverted"
-                  data-position="top center"
-                  >
-                  {<img 
-                  className="ui image" 
-                  src={image.src}
-                  ref={`img_`+index}
-                  onMouseOver={this.handleMouseOver.bind(this, index)}
-                  onClick={this.handleMouseClick.bind(this,image.src, index)}
-                  />}
-                </a>
-              );
-            })
-          }
-        </div>
-        <div className="ui modal_1 fullscreen modal" ref="modal_1">
-            <img 
-            src={this.src}
-            ref="img_modal"
-            width="100%"
-            onClick={this.handleModalImgClick}
-            />
+      <div className="app-content">
+        <div className="ui vertical stripe segment">
+          <h1 className = "ui header">
+            Testing system
+          </h1>   
+          <div className="ui grid">
+            {
+              this.images.map((image, index) => {
+                return (
+                  <a
+                    href="#" 
+                    className={this.className+` img_`+index}
+                    key={`level_${index}`}
+                    data-content={image.dc}
+                    data-letiation="inverted"
+                    data-position="top center"
+                    >
+                    {<img 
+                    className="ui image" 
+                    src={image.src}
+                    ref={`img_`+index}
+                    onMouseOver={this.handleMouseOver.bind(this, index)}
+                    onClick={this.handleMouseClick.bind(this,image.src, index)}
+                    />}
+                  </a>
+                );
+              })
+            }
+          </div>
+          <div className="ui modal_1 fullscreen modal" ref="modal_1">
+              <img 
+              src={this.src}
+              ref="img_modal"
+              width="100%"
+              onClick={this.handleModalImgClick}
+              />
+          </div>
         </div>
       </div>
     );

@@ -9,6 +9,7 @@ import TestingSystemGrid from '../components/TestingSystemGrid';
 import VusGrid from '../components/VusGrid';
 import WarehouseGrid from '../components/WarehouseGrid';
 import TeacherGrid from '../components/TeacherGrid';
+import Footer from '../components/Footer';
 
 let MainMenu = React.createClass({
   componentDidMount: function() {
@@ -124,21 +125,22 @@ let MainMenu = React.createClass({
             <i className="sign out large icon"></i>
           Logout
           </a>
-
         </div> 
-        {/*<div id = "embed" > </div>*/}
         <div id = "container-content" className="vertical stripe segment container-content"> </div>
         <div id = "footer" >
+          {/*<Footer />*/}
           <div className="ui inverted vertical footer segment">
             <div className="ui center aligned container">
-              <div className="ui horizontal inverted small divided link list">
-                <a className="item" href="#">Site Map</a>
-                <a className="item" href="#">Contact Us</a>
+              <div className="ui horizontal inverted small link list">
+                <a className="item" href="http://teh5.ru">teh5.ru</a>
+              </div>
+              <div className="ui right floated horizontal inverted small list">
+                <div className="disabled item">Made with:</div>
+                <div className="item">React + Semantic UI + Webpack</div>
               </div>
             </div>
           </div>
-
-         </div>
+        </div>
       </div>
     );
   }

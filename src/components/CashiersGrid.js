@@ -4,8 +4,8 @@ import ReactDOM from 'react-dom';
 let CashiersGrid = React.createClass({
   render: function() {
     return (
-      <div className="pusher">
-        <div className = "ui segment">
+      <div className="app-content">
+        <div className = "ui vertical stripe segment">
           <div className="ui two column doubling grid" style={{"maxHeight": "80px"}}>
             <div className="six wide column">
             <h1 className = "ui header">
