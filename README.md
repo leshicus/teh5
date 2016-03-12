@@ -1,6 +1,6 @@
 # Teh5
-Starter kit: [React Slingshot](https://github.com/coryhouse/react-slingshot)
-or [React Slingshot](https://github.com/leshicus/teh5/README_Slingshot.md)
+Starter kit: [React Slingshot](https://github.com/coryhouse/react-slingshot).
+[README](https://github.com/leshicus/teh5/blob/master/README_Slingshot.md)
 ## Get Started
 1. **Initial Machine Setup**. First time running the starter kit? Then complete the [Initial Machine Setup](https://github.com/coryhouse/react-slingshot#initial-machine-setup).
 2. **Clone the project**. `git clone https://github.com/leshicus/teh5.git`.
