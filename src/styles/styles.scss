@@ -1,4 +1,4 @@
-.app {
+.app,.grid {
     //position: fixed;
     // top: 4em;
     // left: 0;
@@ -32,4 +32,15 @@ body {
 .container-content {
     //padding-top: 60px;
     height: 100%;
+}
+
+
+p {
+    text-indent: 20px; /* Отступ первой строки в пикселах */
+}
+
+.not-active {
+   pointer-events: none;
+   cursor: default;
+   opacity:0.5;
 }

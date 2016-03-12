@@ -54,7 +54,7 @@ let FormAutorization = React.createClass({
 			<div className="ui middle aligned center aligned grid">
 				<div className="four wide column">
 					<h2 className="ui teal image header">
-						<i className="sign in icon"></i>
+
 						<div className="content">
 							Authorization
 						</div>

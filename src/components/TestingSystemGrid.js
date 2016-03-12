@@ -2,8 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 let TestingSystemGrid = React.createClass({
-  componentDidUpdate: function() {
-    //console.log(arguments);
+  componentDidMount: function() {
+    $('.menu .item')
+      .tab()
+    ;
   },
 
   handleMouseOver: function(index, e) {
@@ -93,33 +95,45 @@ let TestingSystemGrid = React.createClass({
         <div className="ui vertical stripe segment">
           <h1 className = "ui header">
             Testing system
-          </h1>   
-          <div className="ui grid">
-            {
-              this.images.map((image, index) => {
-                return (
-                  <a
-                    href="#" 
-                    className={this.className+` img_`+index}
-                    key={`level_${index}`}
-                    data-content={image.dc}
-                    data-letiation="inverted"
-                    data-position="top center"
-                    >
-                    {<img 
-                    className="ui image" 
-                    src={image.src}
-                    ref={`img_`+index}
-                    onMouseOver={this.handleMouseOver.bind(this, index)}
-                    onClick={this.handleMouseClick.bind(this,image.src, index)}
-                    />}
-                  </a>
-                );
-              })
-            }
+          </h1>
+
+          <div className="ui top attached tabular menu">
+            <a className="active item" data-tab="screenshots">Screenshots</a>
+            <a className="item not-active" data-tab="about">About</a>
           </div>
+
+          <div className="ui bottom attached active tab segment" data-tab="screenshots">
+            <div className="ui grid">
+              {
+                this.images.map((image, index) => {
+                  return (
+                    <a
+                      href="#"
+                      className={this.className+` img_`+index}
+                      key={`level_${index}`}
+                      data-content={image.dc}
+                      data-letiation="inverted"
+                      data-position="top center"
+                      >
+                      {<img
+                      className="ui image"
+                      src={image.src}
+                      ref={`img_`+index}
+                      onMouseOver={this.handleMouseOver.bind(this, index)}
+                      onClick={this.handleMouseClick.bind(this,image.src, index)}
+                      />}
+                    </a>
+                  );
+                })
+              }
+            </div>
+          </div>
+          <div className="ui bottom attached tab segment" data-tab="about">
+            About
+          </div>
+
           <div className="ui modal_1 fullscreen modal" ref="modal_1">
-              <img 
+              <img
               src={this.src}
               ref="img_modal"
               width="100%"
