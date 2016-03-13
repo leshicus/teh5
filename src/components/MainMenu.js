@@ -13,9 +13,7 @@ import Footer from '../components/Footer';
 
 let MainMenu = React.createClass({
   componentDidMount: function() {
-    // $('.ui.dropdown')
-    //  .dropdown();
-    this.handleHomeClick();
+    this.handlePortfolioClickCash();
   },
 
   handleHomeClick: function(e) {
@@ -28,9 +26,8 @@ let MainMenu = React.createClass({
     return;
   },
 
-  handlePortfolioClick1: function(e) {
+  handlePortfolioClickCash: function(e) {
     ReactDOM.render(<CashiersGrid />, document.getElementById('container-content'));
-    //$('.ui.embed').embed({ "icon": "video play icon" });
     return;
   },
 
@@ -56,8 +53,6 @@ let MainMenu = React.createClass({
 
   handleLogoutClick: function() {
     ReactDOM.render(<FormAutorization />, document.getElementById('app'));
-    //ReactDOM.unmountComponentAtNode(document.getElementById('container-content'));
-    // ReactDOM.unmountComponentAtNode(document.getElementById('footer'));
   },
 
   render: function() {
@@ -84,7 +79,7 @@ let MainMenu = React.createClass({
                   <span>Ext JS</span>
                 </div>
               </div>
-              <div className="item" onClick={this.handlePortfolioClick1}>
+              <div className="item" onClick={this.handlePortfolioClickCash}>
                 <i className="ui record icon"></i>
                 Cashier's workplace
               </div>
@@ -108,8 +103,6 @@ let MainMenu = React.createClass({
 
               <div className="ui header">
                 <div className="content">
-                  {/*<img className="ui mini image" src="angularjs.png"/>*/}
-                  {/*<i className="ui folder outline large icon"></i>*/}
                   Angular JS
                 </div>
               </div>
