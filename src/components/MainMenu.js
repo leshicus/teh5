@@ -68,7 +68,7 @@ let MainMenu = React.createClass({
           <div className="header item">
             Alexey Volkov
           </div>
-          <a className="item" onClick={this.handleHomeClick}>
+          <a className="disabled item">
             <i className="building outline large icon"></i>
             Home
           </a>
@@ -117,7 +117,7 @@ let MainMenu = React.createClass({
             </div>
           </div>
 
-          <a  className="disabled item" onClick={this.handleAboutClick}>
+          <a  className="disabled item">
             <i className="user large icon"></i>
             About
           </a>

@@ -1,5 +1,5 @@
 # Teh5
-Starter kit: [React Slingshot](https://github.com/coryhouse/react-slingshot).
+Forked from: starter kit, react-slingshot, React + Redux starter kit with Babel, hot reloading, testing, linting and a working example app, all built in : [React Slingshot](https://github.com/coryhouse/react-slingshot).
 [README](https://github.com/leshicus/teh5/blob/master/README_Slingshot.md)
 ## Get Started
 1. **Initial Machine Setup**. First time running the starter kit? Then complete the [Initial Machine Setup](https://github.com/coryhouse/react-slingshot#initial-machine-setup).
