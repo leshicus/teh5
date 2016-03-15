@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { ROOT } from '../constants/Constants';
 
 let WarehouseGrid = React.createClass({
   componentDidMount: function() {
     $('.menu .item')
-      .tab()
-    ;
+      .tab();
   },
 
   handleMouseOver: function(index, e) {
@@ -41,10 +41,10 @@ let WarehouseGrid = React.createClass({
 
   render: function() {
     let images = [{
-      src: "image/warehouse/main screen.png",
+      src: ROOT + "image/warehouse/main screen.png",
       dc: "Main screen"
     }, {
-      src: "image/warehouse/record edit.png",
+      src: ROOT + "image/warehouse/record edit.png",
       dc: "Editing of the record"
     }];
     let className = "sixteen wide mobile eight wide tablet four wide computer column";

@@ -74,36 +74,29 @@ let MainMenu = React.createClass({
             <div className="menu">
               <div className="ui header" >
                 <div className="content">
-                  {/*<img className="ui mini image" src="sencha2.jpeg"/>*/}
-                  {/*<i className="ui folder outline large icon"></i>*/}
-                  <span>Ext JS</span>
+                  <span><u>Ext JS</u></span>
                 </div>
               </div>
               <div className="item" onClick={this.handlePortfolioClickCash}>
-                <i className="ui record icon"></i>
                 Cashier's workplace
               </div>
               <div className="item" onClick={this.handlePortfolioClickTest}>
-                <i className="ui photo icon"></i>
                 Testing system
               </div>
               <div className="item" onClick={this.handlePortfolioClickVus}>
-                <i className="ui photo icon"></i>
                 Military registration
               </div>
               <div className="item" onClick={this.handlePortfolioClickWarehouse}>
-                <i className="ui photo icon"></i>
                 Warehouse
               </div>
               <div className="item" onClick={this.handlePortfolioClickTeacher}>
-                <i className="ui photo icon"></i>
                 Teachers workload
               </div>
               <div className="divider"></div>
 
               <div className="ui header">
                 <div className="content">
-                  Angular JS
+                  <u>Angular JS</u>
                 </div>
               </div>
                 <div className="disabled item">Kids-club managment</div>

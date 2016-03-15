@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { ROOT } from '../constants/Constants';
 
 let TeacherGrid = React.createClass({
   componentDidMount: function() {
     $('.menu .item')
-      .tab()
-    ;
+      .tab();
   },
 
   handleMouseOver: function(index, e) {
@@ -41,7 +41,7 @@ let TeacherGrid = React.createClass({
 
   render: function() {
     let images = [{
-      src: "image/teacher/main screen.png",
+      src: ROOT + "image/teacher/main screen.png",
       dc: "Main screen"
     }];
     let className = "sixteen wide mobile eight wide tablet four wide computer column";

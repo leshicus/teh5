@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { ROOT } from '../constants/Constants';
 
 let VusGrid = React.createClass({
   componentDidMount: function() {
     $('.menu .item')
-      .tab()
-    ;
+      .tab();
   },
   handleMouseOver: function(index, e) {
     let ref = 'img_' + index;
@@ -17,7 +17,7 @@ let VusGrid = React.createClass({
   },
   handleMouseClick: function(src, index, e) {
     this.src = src;
- this.index = index;
+    this.index = index;
 
 
     $('.modal_2.fullscreen.modal').modal((function() {
@@ -41,10 +41,10 @@ let VusGrid = React.createClass({
 
   render: function() {
     let images = [{
-      src: "image/vus/main screen.png",
+      src: ROOT + "image/vus/main screen.png",
       dc: "Main screen"
     }, {
-      src: "image/vus/record edit.png",
+      src: ROOT + "image/vus/record edit.png",
       dc: "Editing of the record"
     }];
     let className = "sixteen wide mobile eight wide tablet four wide computer column";

@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import MainMenu from '../components/MainMenu';
-//var $ = require("jquery");
 
 let FormAutorization = React.createClass({
 	getInitialState: function() {
@@ -22,15 +21,11 @@ let FormAutorization = React.createClass({
 		let password = ReactDOM.findDOMNode(this.refs.pass).value;
 
 		if (login == this.getInitialState().login && password == this.getInitialState().password) {
-			//console.log(<MainMenu />);
 			ReactDOM.render(<MainMenu />, document.getElementById('app'));
-			//ReactDOM.render(<Footer />, document.getElementById('footer'));
-
 		}
 	},
 
 	handlePasswordClick: function(e) {
-		//console.log(e);
 		if (!e) e = window.event;
 		let keyCode = e.keyCode || e.which;
 		if (keyCode == '13') {
@@ -40,7 +35,6 @@ let FormAutorization = React.createClass({
 	},
 
 	handleLoginClick: function(e) {
-		//console.log(e);
 		if (!e) e = window.event;
 		let keyCode = e.keyCode || e.which;
 		if (keyCode == '13') {
