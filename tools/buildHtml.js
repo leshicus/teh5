@@ -27,8 +27,6 @@ fs.readFile('src/index.html', 'utf8', (err, markup) => {
   // since a separate spreadsheet is only utilized for the production build, need to dynamically add this here.
   $('head').prepend('<link rel="stylesheet" href="' + ROOT + 'styles/styles.css">');
   $('head').prepend('<link rel="shortcut icon" href="' + ROOT + 'image/react.png" type="image/png">');
-  $('head').prepend('<link rel="stylesheet" href="' + ROOT + 'styles/agate.css"');
-
 
   if (useTrackJs) {
     if (trackJsToken) {

@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import { ROOT } from '../constants/Constants';
 import FormAutorization from '../components/FormAutorization';
 import Home from '../components/Home';
 import About from '../components/About';
@@ -10,10 +11,13 @@ import VusGrid from '../components/VusGrid';
 import WarehouseGrid from '../components/WarehouseGrid';
 import TeacherGrid from '../components/TeacherGrid';
 import Footer from '../components/Footer';
+import PlaygroundJavascript from '../components/PlaygroundJavascript';
 
 let MainMenu = React.createClass({
   componentDidMount: function() {
-    this.handlePortfolioClickCash();
+    if (ROOT == '/') {
+      this.handlePortfolioClickCash();
+    }
   },
 
   handleHomeClick: function(e) {
@@ -48,6 +52,11 @@ let MainMenu = React.createClass({
 
   handlePortfolioClickTeacher: function(e) {
     ReactDOM.render(<TeacherGrid />, document.getElementById('container-content'));
+    return;
+  },
+
+  handlePlaygroundJavascript: function(e) {
+    ReactDOM.render(<PlaygroundJavascript />, document.getElementById('container-content'));
     return;
   },
 
@@ -103,30 +112,39 @@ let MainMenu = React.createClass({
             </div>
           </div>
 
-          <a  className="disabled item">
+          <a className="disabled item" >
             <i className="user large icon"></i>
             About
           </a>
+          <div className="ui simple dropdown item" >
+            {/*<i className="user large icon"></i>*/}
+            Playground
+            <i className="dropdown icon"></i>
+            <div className="menu">
+              <div className="item" onClick={this.handlePlaygroundJavascript}>
+                JavaScript
+              </div>
+            </div>
+          </div>
           <a className="item" onClick={this.handleLogoutClick} >
             <i className="sign out large icon"></i>
           Logout
           </a>
-        </div>
-        <div id = "container-content" className="vertical stripe segment container-content"> </div>
-        <div id = "footer" >
-          {/*<Footer />*/}
+        </div> 
+        <div id = "container-content" className = "vertical stripe segment container-content"> </div> 
+        <div id = "footer" > { /*<Footer />*/ }
           <div className="ui inverted vertical footer segment">
             <div className="ui container">
               <div className="ui horizontal inverted  link list">
-                <a className="item" href="http://teh5.ru">teh5.ru</a>
+                <a className="item" href="#">2016</a>
               </div>
               <div className="ui right floated horizontal inverted  list">
                 <div className="disabled item">Made with:</div>
                 <div className="item">React + Semantic UI + Webpack</div>
               </div>
             </div>
-          </div>
-        </div>
+          </div> 
+        </div> 
       </div>
     );
   }

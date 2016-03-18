@@ -1,4 +1,6 @@
-.app,.grid {
+@import "monokai_sublime.css";
+.app,
+.grid {
     //position: fixed;
     // top: 4em;
     // left: 0;
@@ -34,13 +36,13 @@ body {
     height: 100%;
 }
 
-
 p {
-    text-indent: 20px; /* Отступ первой строки в пикселах */
+    text-indent: 20px;
+    /* Отступ первой строки в пикселах */
 }
 
 .not-active {
-   pointer-events: none;
-   cursor: default;
-   opacity:0.5;
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.5;
 }
