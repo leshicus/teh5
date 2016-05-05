@@ -1,2 +1,2 @@
-//export const ROOT = 'portfolio/';
-export const ROOT = '/';
+export const ROOT = 'portfolio/';
+//export const ROOT = '/';

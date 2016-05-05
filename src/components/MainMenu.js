@@ -6,6 +6,7 @@ import FormAutorization from '../components/FormAutorization';
 import Home from '../components/Home';
 import About from '../components/About';
 import CashiersGrid from '../components/CashiersGrid';
+import Minicart from '../components/Minicart';
 import TestingSystemGrid from '../components/TestingSystemGrid';
 import VusGrid from '../components/VusGrid';
 import WarehouseGrid from '../components/WarehouseGrid';
@@ -35,6 +36,11 @@ let MainMenu = React.createClass({
     return;
   },
 
+  handlePortfolioClickMinicart: function(e) {
+    ReactDOM.render(<Minicart />, document.getElementById('container-content'));
+    return;
+  },
+
   handlePortfolioClickTest: function(e) {
     ReactDOM.render(<TestingSystemGrid />, document.getElementById('container-content'));
     return;
@@ -56,7 +62,7 @@ let MainMenu = React.createClass({
   },
 
   handlePlaygroundJavascript: function(e) {
-    ReactDOM.render(<PlaygroundJavascript />, document.getElementById('container-content'));
+    //ReactDOM.render(<PlaygroundJavascript />, document.getElementById('container-content'));
     return;
   },
 
@@ -88,6 +94,9 @@ let MainMenu = React.createClass({
               </div>
               <div className="item" onClick={this.handlePortfolioClickCash}>
                 Cashier's workplace
+              </div>
+              <div className="item" onClick={this.handlePortfolioClickMinicart}>
+                Mini cart widget
               </div>
               <div className="item" onClick={this.handlePortfolioClickTest}>
                 Testing system
@@ -121,7 +130,7 @@ let MainMenu = React.createClass({
             Playground
             <i className="dropdown icon"></i>
             <div className="menu">
-              <div className="item" onClick={this.handlePlaygroundJavascript}>
+              <div className="disabled item" onClick={this.handlePlaygroundJavascript}>
                 JavaScript
               </div>
             </div>
